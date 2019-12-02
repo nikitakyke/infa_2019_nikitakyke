@@ -52,19 +52,18 @@ class ball():
         distance_right = 800 - self.x - self.r
         distance_down = 600 - self.y - self.r
         distance_up = self.y - self.r
-        if self.r!=0:
-            if (distance_left < 0):
-                self.vx = - self.vx
-                self.x = self.r
-            if (distance_right < 0):
-                self.vx = - self.vx
-                self.x = 800 - self.r
-            if (distance_up < 0):
-                self.vy = - self.vy
-                self.y = self.r
-            if (distance_down < 0):
-                self.vy = - self.vy
-                self.y = 600 - self.r
+        if (distance_left < 0):
+            self.vx = - self.vx
+            self.x = self.r
+        if (distance_right < 0):
+            self.vx = - self.vx
+            self.x = 800 - self.r
+        if (distance_up < 0):
+            self.vy = - self.vy
+            self.y = self.r
+        if (distance_down < 0):
+            self.vy = - self.vy
+            self.y = 600 - self.r
         self.x += self.vx
         self.y -= self.vy
         """ускорение"""
@@ -91,7 +90,7 @@ class ball():
         distance_x = self.x - obj.x
         distance_y = self.y - obj.y
         distance = (distance_x**2 + distance_y**2)**0.5
-        if distance<obj.r and self.r!=0 :
+        if distance<obj.r :
             return True
         else :
             return False
