@@ -82,8 +82,10 @@ def new_game(event=''):
     for b in module_ball.balls:
         """Цикл для удаления оставшихся шариков"""
         b.hit()
+    module_ball.balls = []
     canv.itemconfig(screen1, text='')
     canv.update()
-    root.after(25, new_game)
+    root.after(15, new_game)
 new_game()
 mainloop()
+
