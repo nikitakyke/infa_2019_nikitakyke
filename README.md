@@ -1,1 +1,1 @@
-# infa_2019_nikitakyke
+# python_games_nikitakyke
